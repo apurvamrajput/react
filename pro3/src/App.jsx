@@ -5,6 +5,7 @@ function App(){
       <ol>python</ol>
       <ol>java</ol>
       <ol>AWS</ol>
+      <ol>C++</ol>
     </li>
     </>
 
