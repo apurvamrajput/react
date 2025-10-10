@@ -1,12 +1,11 @@
+import { ChildA } from "./component/ChildA";
+
 function App(){
+  let obj  = {name:"aa",city:"pune"}
   return(
     <>
-    <li>
-      <ol>python</ol>
-      <ol>java</ol>
-      <ol>AWS</ol>
-      <ol>C++</ol>
-    </li>
+    <ChildA name="aaa" />
+   
     </>
 
   )
