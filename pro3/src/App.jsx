@@ -1,11 +1,11 @@
-import { ChildA } from "./component/ChildA";
+
 
 function App(){
-  let obj  = {name:"aa",city:"pune"}
+ 
   return(
     <>
-    <ChildA name="aaa" />
-   
+    
+  <h1> aaa</h1>
     </>
 
   )
