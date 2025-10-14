@@ -16,7 +16,7 @@ function App() {
         <msg.Provider value="welcome to UI session">
           
           {/* child Comp */}
-          <ChildB/>
+          <ChildA/>
 
           </msg.Provider>
       </name.Provider>
