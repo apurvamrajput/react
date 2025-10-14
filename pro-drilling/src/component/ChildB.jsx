@@ -5,7 +5,7 @@ function ChildB(props) {
   return (
     <div>ChildB
         <h1>{props.nm}</h1>
-        <ChildC n ={props.nm}/>
+        <ChildC />
     </div>
   )
 }
