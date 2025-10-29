@@ -1,4 +1,4 @@
-//for state we have to createing
+//for state we have to creating
 //  class base compoent 
 
 import React, { Component } from 'react'
