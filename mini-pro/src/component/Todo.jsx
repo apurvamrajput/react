@@ -5,8 +5,23 @@ function Todo() {
     const [todo,setTodo] = useState([])
 
      const AddItem=()=>{
+        if(input.trim() === ''){
+            alert("Add vaild data!!")
+        }
+        else{
             setTodo([...todo,input])
+            setInput("")
+        }
     }
+    const deleteItem = (index)=>{
+        const delitem = [...todo]//temp store in var
+        delitem.splice(index,1)
+        setTodo(delitem)
+        
+    }
+       
+   
+
 
   return (
     <div className='bg-secondary w-50 mx-auto mt-5 rounded-4 p-5'>
@@ -31,12 +46,13 @@ function Todo() {
                 {
                     todo.map((item,index)=>{
                         return(
-                            <tr>
+                            <tr key={index}>
                                 <td>{index+1}</td>
                                 <td>{item}</td>
                                 <td>
-                                    <button className='btn btn-warning'>Update</button>
-                                    <button className='btn btn-danger'>Delete</button>
+                                    <button className='btn btn-warning me-3'>Update</button>
+                                    <button className='btn btn-danger'
+                                    onClick={()=>deleteItem(index)}>Delete</button>
                                 </td>
                             </tr>
                         )
