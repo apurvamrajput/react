@@ -1,8 +1,14 @@
 import React from 'react'
+import Slider from './Slider'
+import Course from './Course'
+
 
 function Home() {
   return (
-    <div>Home page</div>
+    <div>
+      <Slider/>
+      <Course/>
+    </div>
   )
 }
 
