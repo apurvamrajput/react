@@ -8,6 +8,7 @@ import About from './component/pages/About.jsx'
 import Contact from './component/pages/Contact.jsx'
 import Footer from './component/layout/Footer.jsx'
 import ErrorPage from './component/pages/ErrorPage.jsx'
+import Register from './component/pages/Register.jsx'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/register" element={<Register/>}></Route>
           <Route path="*" element={<ErrorPage/>}></Route>
           
         </Routes>

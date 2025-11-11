@@ -2,15 +2,15 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='bg-dark text-light text-center'>
+    <div className='bg-dark text-light text-center '>
         <div className='parent d-flex justify-content-evenly' >
             <div className='w-25 p-2'>
-                <h3 className='text-warning'>Irise</h3>
+                <h4 className='text-warning'>Irise</h4>
                 Empowering Your Career With Expert-Led Training, Practical Experience,
                 <br></br> And Personalized Support. Join Us To Achieve Your Professional Goals And Succeed.
             </div>
             <div className='w-25 p-2'>
-                <h3 className='text-warning'>OUR Courses</h3>
+                <h4 className='text-warning'>OUR Courses</h4>
                 
                     Java Full Stack Development<br></br>
                     Practical Digital Marketing & SEO<br></br>
@@ -20,7 +20,7 @@ function Footer() {
                     Software Testing<br></br>
             </div>
             <div className='w-25 p-2'>
-                <h3 className='text-warning'>Contact Us</h3>
+                <h4 className='text-warning'>Contact Us</h4>
                 
                     Office No 301, 3rd Floor, Krishnai Plaza, 
                     above Dominos Pizza, Karve Nagar, Pune, 

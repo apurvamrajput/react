@@ -16,6 +16,7 @@ function Navbar() {
         <NavLink className="nav-link active text-light" aria-current="page" to="/home">Home</NavLink>
         <NavLink className="nav-link text-light" to="/about">About us</NavLink>
         <NavLink className="nav-link text-light" to="/contact">Contact</NavLink>
+         <NavLink className="nav-link text-light" to="/register">Register</NavLink>
        
       </div>
     </div>
