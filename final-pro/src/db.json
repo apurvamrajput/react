@@ -1,7 +1,64 @@
 {
-    "student":[
-        {
-            "id":1
-        }
-    ]
+  "student": [
+    {
+      "fname": "shiv",
+      "lname": "rajput",
+      "mname": "abc",
+      "address": "xyz",
+      "gender": "Male",
+      "state": "MP",
+      "city": "indore",
+      "dob": "23/01/1998",
+      "pincode": "123456",
+      "course": "java",
+      "email": "a@gmail.com",
+      "ftname": "om",
+      "id": 1
+    },
+    {
+      "fname": "apurva",
+      "lname": "rajput",
+      "mname": "xyz",
+      "address": "pune",
+      "gender": "Female",
+      "state": "MP",
+      "city": "indore",
+      "dob": "23/01/2002",
+      "pincode": "123456",
+      "course": "UI",
+      "email": "abc@gmail.com",
+      "ftname": "mno",
+      "id": 2
+    },
+    {
+      "fname": "ashu",
+      "lname": "jhfgv",
+      "mname": "sdf",
+      "ftname": "sdf",
+      "address": "dfgh",
+      "gender": "Female",
+      "state": "UP",
+      "city": "patna",
+      "dob": "10/10/2000",
+      "pincode": "654322",
+      "course": "python",
+      "email": "ashish@gsmil.com",
+      "id": 3
+    },
+    {
+      "fname": "ythfcn",
+      "lname": "",
+      "mname": "",
+      "ftname": "",
+      "address": "",
+      "gender": null,
+      "state": "",
+      "city": "1",
+      "dob": "",
+      "pincode": "",
+      "course": "",
+      "email": "",
+      "id": 4
+    }
+  ]
 }

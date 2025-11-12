@@ -17,7 +17,7 @@ function Navbar() {
         <NavLink className="nav-link text-light" to="/about">About us</NavLink>
         <NavLink className="nav-link text-light" to="/contact">Contact</NavLink>
          <NavLink className="nav-link text-light" to="/register">Register</NavLink>
-       
+         <NavLink className="nav-link text-light" to="/show">Show</NavLink>
       </div>
     </div>
   </div>

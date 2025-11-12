@@ -9,6 +9,7 @@ import Contact from './component/pages/Contact.jsx'
 import Footer from './component/layout/Footer.jsx'
 import ErrorPage from './component/pages/ErrorPage.jsx'
 import Register from './component/pages/Register.jsx'
+import Show from './component/pages/Show.jsx'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/register" element={<Register/>}></Route>
+          <Route path="/show" element={<Show/>}></Route>
           <Route path="*" element={<ErrorPage/>}></Route>
           
         </Routes>

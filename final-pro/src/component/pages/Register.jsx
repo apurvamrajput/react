@@ -1,8 +1,17 @@
 import React from 'react'
 import "./register.css"
+import {useForm} from "react-hook-form"
+import axios from "axios"
 
 // align --> shift + alt + f
 function Register() {
+  const {register,handleSubmit,reset} = useForm()
+  //Add data 
+  const addData = (data)=>{
+        axios.post("http://localhost:5000/student",data)
+        reset()
+        alert("Data Added!!!")
+  }
     return (
         <div>
             <section className="h-100 bg-dark">
@@ -19,17 +28,18 @@ function Register() {
                                     <div className="col-xl-6">
                                         <div className="card-body p-md-5 text-black">
                                             <h3 className="mb-5 text-uppercase">Student registration form</h3>
-                                            <form>
+                                            <form onSubmit={handleSubmit(addData)}>
                                                 <div className="row">
                                                     <div className="col-md-6 mb-4">
                                                         <div data-mdb-input-init className="form-outline">
-                                                            <input type="text" id="form3Example1m" className="form-control form-control-lg" />
+                                                            <input type="text" id="form3Example1m" className="form-control form-control-lg" {...register("fname")}/>
                                                             <label className="form-label" htmlFor="form3Example1m">First name</label>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 mb-4">
                                                         <div data-mdb-input-init className="form-outline">
-                                                            <input type="text" id="form3Example1n" className="form-control form-control-lg" />
+                                                            <input type="text" id="form3Example1n" className="form-control form-control-lg" 
+                                                            {...register("lname")}/>
                                                             <label className="form-label" htmlFor="form3Example1n">Last name</label>
                                                         </div>
                                                     </div>
@@ -38,20 +48,23 @@ function Register() {
                                                 <div className="row">
                                                     <div className="col-md-6 mb-4">
                                                         <div data-mdb-input-init className="form-outline">
-                                                            <input type="text" id="form3Example1m1" className="form-control form-control-lg" />
+                                                            <input type="text" id="form3Example1m1" className="form-control form-control-lg" 
+                                                            {...register("mname")}/>
                                                             <label className="form-label" htmlFor="form3Example1m1">Mother's name</label>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 mb-4">
                                                         <div data-mdb-input-init className="form-outline">
-                                                            <input type="text" id="form3Example1n1" className="form-control form-control-lg" />
+                                                            <input type="text" id="form3Example1n1" className="form-control form-control-lg"
+                                                            {...register("ftname")} />
                                                             <label className="form-label" htmlFor="form3Example1n1">Father's name</label>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div data-mdb-input-init className="form-outline mb-4">
-                                                    <input type="text" id="form3Example8" className="form-control form-control-lg" />
+                                                    <input type="text" id="form3Example8" className="form-control form-control-lg" 
+                                                    {...register("address")}/>
                                                     <label className="form-label" htmlFor="form3Example8">Address</label>
                                                 </div>
 
@@ -61,19 +74,19 @@ function Register() {
 
                                                     <div className="form-check form-check-inline mb-0 me-4">
                                                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                                                            value="Female" />
+                                                            value="Female" {...register("gender")}/>
                                                         <label className="form-check-label" htmlFor="femaleGender">Female</label>
                                                     </div>
 
                                                     <div className="form-check form-check-inline mb-0 me-4">
                                                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                                                            value="Male" />
+                                                            value="Male" {...register("gender")} />
                                                         <label className="form-check-label" htmlFor="maleGender">Male</label>
                                                     </div>
 
                                                     <div className="form-check form-check-inline mb-0">
                                                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
-                                                            value="Other" />
+                                                            value="Other"{...register("gender")} />
                                                         <label className="form-check-label" htmlFor="otherGender">Other</label>
                                                     </div>
 
@@ -82,7 +95,8 @@ function Register() {
                                                 <div className="row">
                                                     <div className="col-md-6 mb-4">
 
-                                                        <select data-mdb-select-init className='w-100 p-1'>
+                                                        <select data-mdb-select-init className='w-100 p-1'
+                                                        {...register("state")}>
                                                             <option value="">State</option>
                                                             <option value="Maharashtra">Maharashtra</option>
                                                             <option value="MP">MP</option>
@@ -92,7 +106,8 @@ function Register() {
                                                     </div>
                                                     <div className="col-md-6 mb-4">
 
-                                                        <select data-mdb-select-init className='w-100 p-1'>
+                                                        <select data-mdb-select-init className='w-100 p-1'
+                                                        {...register("city")}>
                                                             <option value="1">City</option>
                                                             <option value="Pune">Pune</option>
                                                             <option value="indore">Indore</option>
@@ -103,22 +118,26 @@ function Register() {
                                                 </div>
 
                                                 <div data-mdb-input-init className="form-outline mb-4">
-                                                    <input type="text" id="form3Example9" className="form-control form-control-lg" />
+                                                    <input type="text" id="form3Example9" className="form-control form-control-lg"
+                                                    {...register("dob")} />
                                                     <label className="form-label" htmlFor="form3Example9">DOB</label>
                                                 </div>
 
                                                 <div data-mdb-input-init className="form-outline mb-4">
-                                                    <input type="text" id="form3Example90" className="form-control form-control-lg" />
+                                                    <input type="text" id="form3Example90" className="form-control form-control-lg"
+                                                    {...register("pincode")} />
                                                     <label className="form-label" htmlFor="form3Example90">Pincode</label>
                                                 </div>
 
                                                 <div data-mdb-input-init className="form-outline mb-4">
-                                                    <input type="text" id="form3Example99" className="form-control form-control-lg" />
+                                                    <input type="text" id="form3Example99" className="form-control form-control-lg"
+                                                    {...register("course")} />
                                                     <label className="form-label" htmlFor="form3Example99">Course</label>
                                                 </div>
 
                                                 <div data-mdb-input-init className="form-outline mb-4">
-                                                    <input type="text" id="form3Example97" className="form-control form-control-lg" />
+                                                    <input type="text" id="form3Example97" className="form-control form-control-lg"
+                                                    {...register("email")} />
                                                     <label className="form-label" htmlFor="form3Example97">Email ID</label>
                                                 </div>
 
