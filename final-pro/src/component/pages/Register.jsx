@@ -142,7 +142,7 @@ function Register() {
                                                 </div>
 
                                                 <div className="d-flex justify-content-end pt-3">
-                                                    <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-light btn-lg">Reset all</button>
+                                                    <button type="reset" data-mdb-button-init data-mdb-ripple-init className="btn btn-light btn-lg">Reset all</button>
                                                     <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-warning btn-lg ms-2">Submit form</button>
                                                 </div>
                                             </form>

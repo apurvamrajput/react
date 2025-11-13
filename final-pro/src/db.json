@@ -46,18 +46,18 @@
       "id": 3
     },
     {
-      "fname": "ythfcn",
-      "lname": "",
-      "mname": "",
-      "ftname": "",
-      "address": "",
-      "gender": null,
-      "state": "",
-      "city": "1",
-      "dob": "",
-      "pincode": "",
-      "course": "",
-      "email": "",
+      "fname": "abc",
+      "lname": "jhfgv",
+      "mname": "lata",
+      "ftname": "sdf",
+      "address": "Nashik",
+      "gender": "Male",
+      "state": "UP",
+      "city": "patna",
+      "dob": "10/10/1998",
+      "pincode": "654542",
+      "course": "jquery",
+      "email": "avi@gmail.com",
       "id": 4
     }
   ]

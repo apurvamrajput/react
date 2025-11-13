@@ -1,21 +1,56 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useEffect, useMemo, useState } from 'react'
 import axios from "axios"
 
 function Show() {
     const [student,setStudent] = useState([])
+    const [search,setSearch] = useState("")
+    const [error,setError] = useState("")
+    
     const showData= async()=>{
+        try{
             const response = await axios.get("http://localhost:5000/student")
             console.log(response)//return promise object
-             console.log(response.data)
+            console.log(response.data)
             setStudent(response.data)
+        }
+        catch(error){
+            if (error.response){
+                setError(`Error:${error.response.status} -${error.response.statusText}`)
+            }
+
+        }
     }
 
     useEffect(()=>{
         showData()
     },[])
+
+    const searchData = useMemo(()=>{
+        return student.filter((stu)=>{
+        return stu.course.toLowerCase().includes(search.toLowerCase()) ||
+        stu.city.toLowerCase().includes(search.toLowerCase())
+    })
+    },[student,search])
+
   return (
     <div>
+        <h1 style={{textAlign:"center"}}>Student Record</h1>
+        <div className='w-50 mx-auto mt-2 mb-3'>
+            <input className='form-control'
+            placeholder='Enter Course Name'
+            value={search}
+            onChange={(e)=>setSearch(e.target.value)}/>  
+            {/* {search}  input value */}
+        </div>
+
+        {
+            error && 
+            <p className='text-danger text-center '>{error}</p>
+        }
+        
+       
         <table className='table table-dark'>
+            
             <thead>
                 <tr>
                     <th>Sr no.</th>
@@ -33,7 +68,7 @@ function Show() {
             </thead>
             <tbody>
                 {
-                    student.map((stu,index)=>{
+                    searchData.map((stu,index)=>{
                         return(
                             <tr key={index}>
                                 <td>{index+1}</td>
@@ -58,3 +93,4 @@ function Show() {
 }
 
 export default Show
+
