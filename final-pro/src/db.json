@@ -13,7 +13,7 @@
       "course": "java",
       "email": "a@gmail.com",
       "ftname": "om",
-      "id": 1
+      "id": "1"
     },
     {
       "fname": "apurva",
@@ -28,7 +28,7 @@
       "course": "UI",
       "email": "abc@gmail.com",
       "ftname": "mno",
-      "id": 2
+      "id": "2"
     },
     {
       "fname": "ashu",
@@ -43,13 +43,13 @@
       "pincode": "654322",
       "course": "python",
       "email": "ashish@gsmil.com",
-      "id": 3
+      "id": "3"
     },
     {
-      "fname": "abc",
-      "lname": "jhfgv",
+      "fname": "ganesh",
+      "lname": "chauhan",
       "mname": "lata",
-      "ftname": "sdf",
+      "ftname": "rohit",
       "address": "Nashik",
       "gender": "Male",
       "state": "UP",
@@ -58,7 +58,52 @@
       "pincode": "654542",
       "course": "jquery",
       "email": "avi@gmail.com",
-      "id": 4
+      "id": "4"
+    },
+    {
+      "fname": "amit",
+      "lname": "k",
+      "mname": "xyz",
+      "ftname": "xyz",
+      "address": "karve nagar,pune",
+      "gender": "Male",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "dob": "21/07/1999",
+      "pincode": "444143",
+      "course": "Python",
+      "email": "amit@gmail.com",
+      "id": "5"
+    },
+    {
+      "fname": "pooja",
+      "lname": "Rajput",
+      "mname": "meera",
+      "ftname": "satish",
+      "address": "nagpur",
+      "gender": "Female",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "dob": "17march1998",
+      "pincode": "444143",
+      "course": "DA",
+      "email": "pooja@gmail.com",
+      "id": "6"
+    },
+    {
+      "fname": "virat",
+      "lname": "kohli",
+      "mname": "xyx",
+      "ftname": "mno",
+      "address": "Pune",
+      "gender": "Male",
+      "state": "UP",
+      "city": "patna",
+      "dob": "16/08/2022",
+      "pincode": "444143",
+      "course": "React",
+      "email": "virat@gmail.com",
+      "id": "Kym8wTn"
     }
   ]
 }

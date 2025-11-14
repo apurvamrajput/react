@@ -1,4 +1,5 @@
 import React, {  useEffect, useMemo, useState } from 'react'
+import {NavLink} from "react-router-dom"
 import axios from "axios"
 
 function Show() {
@@ -17,6 +18,7 @@ function Show() {
             if (error.response){
                 setError(`Error:${error.response.status} -${error.response.statusText}`)
             }
+           
 
         }
     }
@@ -36,7 +38,7 @@ function Show() {
     <div>
         <h1 style={{textAlign:"center"}}>Student Record</h1>
         <div className='w-50 mx-auto mt-2 mb-3'>
-            <input className='form-control'
+            <input type="text" className='form-control'
             placeholder='Enter Course Name'
             value={search}
             onChange={(e)=>setSearch(e.target.value)}/>  
@@ -61,8 +63,10 @@ function Show() {
                     <th>State</th>
                     <th>DOB</th>
                     <th>Pincode</th>
+                    <th>address</th>
                     <th>course</th>
                     <th>mail</th>
+                    <th>Action</th>
                 </tr>
 
             </thead>
@@ -71,7 +75,7 @@ function Show() {
                     searchData.map((stu,index)=>{
                         return(
                             <tr key={index}>
-                                <td>{index+1}</td>
+                                <td>{stu.id}</td>
                                 <td>{stu.fname}</td>
                                 <td>{stu.lname}</td>
                                 <td>{stu.gender}</td>
@@ -79,8 +83,13 @@ function Show() {
                                 <td>{stu.state}</td>
                                 <td>{stu.dob}</td>
                                 <td>{stu.pincode}</td>
+                                <td>{stu.address}</td>
                                 <td>{stu.course}</td>
                                 <td>{stu.email}</td>
+                                <td>
+                                    <NavLink to={`/update/${stu.id}`}><button className='btn btn-success'>Edit</button></NavLink>
+                                    <NavLink to={""}><button className='btn btn-danger'>Del</button></NavLink>
+                                </td>
                             </tr>
                         )
                     })
