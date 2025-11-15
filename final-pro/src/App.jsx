@@ -11,6 +11,7 @@ import ErrorPage from './component/pages/ErrorPage.jsx'
 import Register from './component/pages/Register.jsx'
 import Show from './component/pages/Show.jsx'
 import Update from './component/pages/Update.jsx'
+import Delete from './component/pages/Delete.jsx'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/show" element={<Show/>}></Route>
           <Route path="/update/:stuId" element={<Update/>}></Route>
+          <Route path="/delete/:stuId" element={<Delete/>}></Route>
          
           <Route path="*" element={<ErrorPage/>}></Route>
           

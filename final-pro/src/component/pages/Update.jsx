@@ -11,7 +11,7 @@ function Update() {
     const res = await axios.get(`http://localhost:5000/student/${stuId}`)
 
     console.log(res.data)
-    setValue("fname",res.data.fname)
+    setValue("fname",res.data.fname)//key.value --> res.data.fname
     setValue("lname",res.data.lname)
     setValue("mname",res.data.mname)
     setValue("ftname",res.data.ftname)
@@ -19,7 +19,7 @@ function Update() {
     setValue("city",res.data.city)
     setValue("state",res.data.state)
     setValue("course",res.data.course)
-    setValue("pincode",res.data.pincode)
+    setValue("img",res.data.img)
     setValue("address",res.data.address)
     setValue("email",res.data.email)
     setValue("dob",res.data.dob)

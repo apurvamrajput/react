@@ -88,7 +88,7 @@ function Show() {
                                 <td>{stu.email}</td>
                                 <td>
                                     <NavLink to={`/update/${stu.id}`}><button className='btn btn-success'>Edit</button></NavLink>
-                                    <NavLink to={""}><button className='btn btn-danger'>Del</button></NavLink>
+                                    <NavLink to={`/delete/${stu.id}`}><button className='btn btn-danger'>Del</button></NavLink>
                                 </td>
                             </tr>
                         )
